@@ -43,11 +43,11 @@ public class ChordController {
 	private StringE6Repository e6Rep;
 
 	// Log in
-/*	@RequestMapping(value="/")
+	@RequestMapping(value="/")
 	public String login() {
 		return "login";
 	}
-*/	// Show all chords
+	// Show all chords
 	@RequestMapping(value="/chordlist", method = RequestMethod.GET)
 	public String chordlist(Model model) {
 		model.addAttribute("chords", cRep.findAll());
