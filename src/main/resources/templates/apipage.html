@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>GCDB</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+    <style>
+h1, h2, h3, h6, p, a, input, div {
+	font-family: monospace;
+	font-style: normal;
+	font-variant: normal;
+	margin: 20px;
+} 
+header {
+	background-color: white;
+	position: sticky;
+	top: 0;
+}
+h3 {
+	background-color: lightyellow;
+}   
+    </style>
+</head>
+<body>
+	<header>
+		<a href="/chordlist">Back to chord list</a>    
+	</header>
+	<div>
+		<h1>API - how to get data</h1>
+		<h3>Get all chords: <strong>/chords</strong><a href="/chords"><strong>/chords</strong></a></h3>
+		<h3>Get chord by id: <strong>/chord/chord_id</strong><a href="/chord/59"><strong>/chord/59</strong></a></h3>
+		<pre class="tab">
+{
+	"id": 59,
+	"name": "G",
+	"stringE6": {
+		"stringE6Id": 50,
+		"pressWhere": "[]-----|-----|-[x]-|-----|-----|-----|-----|"
+	},
+	"stringH5": {
+		"stringH5Id": 38,
+		"pressWhere": "0|-----|-----|-----|-----|-----|-----|-----|"
+	},
+	"stringG4": {
+		"stringG4Id": 29,
+		"pressWhere": "0|-----|-----|-----|-----|-----|-----|-----|"
+	},
+	"stringD3": {
+		"stringD3Id": 20,
+		"pressWhere": "0|-----|-----|-----|-----|-----|-----|-----|"
+	},
+	"stringA2": {
+		"stringA2Id": 13,
+		"pressWhere": "[]-----|-[x]-|-----|-----|-----|-----|-----|"
+	},
+	"stringE1": {
+		"stringE1Id": 5,
+		"pressWhere": "[]-----|-----|-[x]-|-----|-----|-----|-----|"
+	}
+}
+		</pre>
+	</div>
+	<footer>
+		<p>Markus Karjalainen 2020</p>
+	</footer>
+</body>
+</html>

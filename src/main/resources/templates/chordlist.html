@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>LGCD</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+    <style>
+ul {
+ 	 list-style-type: none;
+ 	 margin: 20px;
+ 	 overflow: hidden;
+ 	 background-color: lightyellow;
+}
+li {
+  	float: left;
+  	margin: 5px;
+  	background-color: lightyellow;
+}
+h1, h2, h3, h6, p, a, input {
+	font-family: monospace;
+	font-style: normal;
+	font-variant: normal;
+}
+h1, h2, h6 {
+	text-align: center;
+}
+h1 {
+	background-color: white;
+	position: sticky;
+	top: 0;
+}
+form {
+	background-color: white;
+	position: sticky;
+	top: 2em;
+	margin: 20px;
+}
+
+	</style>
+</head>
+<body>
+
+		<h1>A Little Guitar Chord Database</h1>
+		<h6 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h6>
+		<h2>Chords saved in this database so far:</h2>
+
+    <ul>
+    	<li th:each = "chord : ${chords}">
+   		<h3 th:text="${chord.name}"></h3>
+   		<p th:text="${chord.id}"></p>
+    	</li>
+    </ul>
+
+	<form th:action="@{/logout}" method="post">
+		<a href="/add" class="btn btn-success">Add a chord</a>
+		<input type="submit" value="Sign Out" class="btn btn-secondary"/>
+		<a th:href="@{/apipage}" class="btn btn-info">API</a>
+	</form>
+
+     <ul>
+     	<li th:each="chord:${chords}">
+     		<div class="flex-container">
+     			<h3 th:text="${chord.name}"></h3>
+     			<p th:text="${chord.id}"></p>
+     			
+     			<pre class="tab">	      III	  V	    VII</pre>
+     			<p th:text="${chord.stringE6.pressWhere}" />
+     			<p th:text="${chord.stringH5.pressWhere}" />
+     			<p th:text="${chord.stringG4.pressWhere}" />
+     			<p th:text="${chord.stringD3.pressWhere}" />
+     			<p th:text="${chord.stringA2.pressWhere}" />
+     			<p th:text="${chord.stringE1.pressWhere}" />
+     			<a th:href="@{/edit/{id}(id=${chord.id})}" class="btn btn-warning">Edit</a>
+     			<p sec:authorize="hasAuthority('ADMIN')">
+     				<a th:href="@{/delete/{id}(id=${chord.id})}" class="btn btn-danger">Delete</a>
+
+				</p>
+				<pre class="tab">	</pre>
+			</div>     	
+     	</li>
+     </ul>
+     <footer>
+		<p>Markus Karjalainen 2020</p>
+	</footer>
+</body>
+</html>

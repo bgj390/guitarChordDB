@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>LGCD</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+    <style>
+h1, h2, h4, p, a, input, label {
+	font-family: monospace;
+	font-style: normal;
+	font-variant: normal;
+	margin-left: 50px;
+}    
+    </style>    
+</head>
+<body>
+	<h1>Edit chord</h1>
+		<div>
+			<h4>Instructions:</h4>
+			<p>Pick a description for each string from drop-down menu below:<br>
+			x|--//--| muted string<br>
+			0|--//--| let ring<br>
+			[]--//[x]//--| select fret<br>
+			</p>
+				<a href="/chordlist">Back to chord list</a>
+		</div>
+		<div>
+		<form th:object="${chord}" th:action="@{../save}" action="#" method="post">
+			<label for="id"></label>
+			<input type="hidden" th:field="*{id}"></input>
+			<label for="name">Name:</label>
+			<input type="text" id="name" th:field="*{name}" /><br>	
+			<label for="stringE6">E6</label>
+			<select id="stringE6list" th:field="*{stringE6}">
+			<option th:each="stringE6: ${stringE6s}" 
+					th:value="${stringE6.stringE6Id}" 
+					th:text="${stringE6.pressWhere}">
+			</option>
+			</select><br>
+			<label for="stringH5list">H5</label>
+			<select id="stringH5list" th:field="*{stringH5}">
+			<option th:each="stringH5: ${stringH5s}" 
+					th:value="${stringH5.stringH5Id}" 
+					th:text="${stringH5.pressWhere}">
+			</option>
+			</select><br>
+			<label for="stringG4list">G4</label>
+			<select id="stringG4list" th:field="*{stringG4}">
+			<option th:each="stringG4: ${stringG4s}" 
+					th:value="${stringG4.stringG4Id}" 
+					th:text="${stringG4.pressWhere}">
+			</option>
+			</select><br>
+			<label for="stringD3list">D3</label>
+			<select id="stringD3list" th:field="*{stringD3}">
+			<option th:each="stringD3: ${stringD3s}" 
+					th:value="${stringD3.stringD3Id}" 
+					th:text="${stringD3.pressWhere}">
+			</option>
+			</select><br>
+			<label for="StringA2list">A2</label>
+			<select id="stringA2list" th:field="*{stringA2}">
+			<option th:each="stringA2: ${stringA2s}" 
+					th:value="${stringA2.stringA2Id}" 
+					th:text="${stringA2.pressWhere}">
+			</option>
+			</select><br>
+			<label for="stringE1list">E1</label>
+			<select id="stringE1list" th:field="*{stringE1}">
+			<option th:each="stringE1: ${stringE1s}" 
+					th:value="${stringE1.stringE1Id}" 
+					th:text="${stringE1.pressWhere}">
+			</option>
+			</select><br>
+			<input class="btn btn-success" type="submit" value="Save"></input>
+		</form>
+	</div>
+	<footer>
+		<p>Markus Karjalainen 2020</p>
+	</footer>
+</body>
+</html>
