@@ -5,6 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
     <style>
+header {
+	background-color: white;
+	position: sticky;
+	top: 0;
+}
 ul {
   list-style-type: none;
   margin: 10px;
@@ -25,7 +30,10 @@ h1, h2, h4, p, a, input, label {
     </style>   
 </head>
 <body>
-	<h1>Chord Constructor</h1>
+	<header>
+		<a href="/chordlist">Back to chord list</a><br>
+		<h1>Chord Constructor</h1>
+	</header>
 	<div>
 		<h2>Chords saved already in 'A Little Guitar Chord Database' are:</h2>
     	<ul>
@@ -45,7 +53,6 @@ h1, h2, h4, p, a, input, label {
 				0|--//--| let ring<br>
 				[]--//--[x]--//--| select fret<br>
 				</p>
-				<a href="/chordlist">Back to chord list</a><br>
 				<label for="name"><strong>** Name required: **</strong></label>
 				<input placeholder="type chord name" type="text" id="name" th:field="*{name}" required/>
 			</div>

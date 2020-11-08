@@ -14,6 +14,7 @@ h1, h2, h4, p, a, input, label {
     </style>    
 </head>
 <body>
+	<a href="/chordlist">Back to chord list</a>
 	<h1>Edit chord</h1>
 		<div>
 			<h4>Instructions:</h4>
@@ -22,7 +23,6 @@ h1, h2, h4, p, a, input, label {
 			0|--//--| let ring<br>
 			[]--//[x]//--| select fret<br>
 			</p>
-				<a href="/chordlist">Back to chord list</a>
 		</div>
 		<div>
 		<form th:object="${chord}" th:action="@{../save}" action="#" method="post">
