@@ -20,7 +20,7 @@ ul {
 li {
   float: left;
 }
-h1, h2, h4, p, a, input, label {
+h1, h4, p, a, input, label {
 	font-family: monospace;
 	font-style: normal;
 	font-variant: normal;
@@ -41,7 +41,7 @@ footer {
 		<h2>Chords saved already in 'A Little Guitar Chord Database' are:</h2>
     	<ul>
     		<li th:each = "chord : ${chords}">
-     			<h2 th:text="${chord.name}"></h2>
+     			<h4 th:text="${chord.name}"></h4>
      			<pre class="tab">	</pre>
     		</li>
     	</ul>
