@@ -143,6 +143,7 @@ public class GuitarChordsApplication {
 			e6Rep.save(new StringE6(sixth));
 			e6Rep.save(new StringE6(seventh));
 			
+/*			commented out due deploynent
 			// hard code some chords
 			cRep.save(new Chord("E", e6Rep.findByPressWhere(empty).get(0), h5Rep.findByPressWhere(empty).get(0), g4Rep.findByPressWhere(first).get(0), d3Rep.findByPressWhere(second).get(0), a2Rep.findByPressWhere(second).get(0), e1Rep.findByPressWhere(empty).get(0)));
 			cRep.save(new Chord("Em", e6Rep.findByPressWhere(empty).get(0), h5Rep.findByPressWhere(empty).get(0), g4Rep.findByPressWhere(empty).get(0), d3Rep.findByPressWhere(second).get(0), a2Rep.findByPressWhere(second).get(0), e1Rep.findByPressWhere(empty).get(0)));
@@ -158,7 +159,7 @@ public class GuitarChordsApplication {
 			cRep.save(new Chord("Cm", e6Rep.findByPressWhere(third).get(0), h5Rep.findByPressWhere(fourth).get(0), g4Rep.findByPressWhere(fifth).get(0), d3Rep.findByPressWhere(fifth).get(0), a2Rep.findByPressWhere(third).get(0), e1Rep.findByPressWhere(mute).get(0)));
 			cRep.save(new Chord("D", e6Rep.findByPressWhere(second).get(0), h5Rep.findByPressWhere(third).get(0), g4Rep.findByPressWhere(second).get(0), d3Rep.findByPressWhere(empty).get(0), a2Rep.findByPressWhere(mute).get(0), e1Rep.findByPressWhere(mute).get(0)));
 			cRep.save(new Chord("Dm", e6Rep.findByPressWhere(first).get(0), h5Rep.findByPressWhere(third).get(0), g4Rep.findByPressWhere(second).get(0), d3Rep.findByPressWhere(empty).get(0), a2Rep.findByPressWhere(mute).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			
+*/			
 			// Create users: admin/admin user/user
 			uRep.deleteAll();
 			User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
