@@ -1,4 +1,4 @@
-package com.example.guitarChords.web;
+/*package com.example.guitarChords.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,15 +18,15 @@ public class UserController {
 	private UserRepository repository;
 	
 	// Log in
-	@RequestMapping(value= {"/", "/login"}, method=RequestMethod.GET)
+	@RequestMapping("/")
 	public String login() {
 		return "login";
 	}
-/*	@GetMapping("/")
+	@GetMapping("/")
 	public String showHome(User user) {
 		return "registration_form";
 	}
-*/	
+	
 	@GetMapping("/registration_form")
 	public String showRegistrationForm(Model model) {
 		User user = new User();
@@ -41,4 +41,4 @@ public class UserController {
 		return "login";
 	}
 	
-}
+}*/

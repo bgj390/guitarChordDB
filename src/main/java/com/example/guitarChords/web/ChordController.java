@@ -43,7 +43,7 @@ public class ChordController {
 	private StringE6Repository e6Rep;
 
 	// Log in
-	@RequestMapping(value="/")
+	@RequestMapping(value= {"/", "/login"}, method = RequestMethod.GET)
 	public String login() {
 		return "login";
 	}
