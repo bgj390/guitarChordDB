@@ -46,7 +46,7 @@ footer {
 		<h2>Chords saved already in 'A Little Guitar Chord Database' are:</h2>
     	<ul>
     		<li th:each = "chord : ${chords}">
-     			<h3 th:text="${chord.name}"></h3>
+     			<h3>-</h3><h3 th:text="${chord.name}"></h3>
     		</li>
     	</ul>
 	</div>
