@@ -13,12 +13,12 @@ header {
 ul {
   list-style-type: none;
   margin: 10px;
-  padding: 10px;
   overflow: hidden;
   background-color: lightyellow;
 }    
 li {
   float: left;
+  margin: 5px;
 }
 h1, h2, h4, p, a, input, label {
 	font-family: monospace;
@@ -46,7 +46,7 @@ footer {
 		<h2>Chords saved already in 'A Little Guitar Chord Database' are:</h2>
     	<ul>
     		<li th:each = "chord : ${chords}">
-     			<h3>-</h3><h3 th:text="${chord.name}"></h3>
+     			<h3 th:text="${chord.name}"></h3>
     		</li>
     	</ul>
 	</div>
