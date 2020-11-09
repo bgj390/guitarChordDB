@@ -50,8 +50,8 @@ footer {
     <ul>
     	<li th:each = "chord : ${chords}">
    		<h3 th:text="${chord.name}"></h3>
-   		<p th:text="${chord.id}"></p>
-    	</li>
+<!--	<p th:text="${chord.id}"></p>     
+-->    	</li>
     </ul>
 
 	<form th:action="@{/logout}" method="post">
@@ -64,8 +64,8 @@ footer {
      	<li th:each="chord:${chords}">
      		<div class="flex-container">
      			<h3 th:text="${chord.name}"></h3>
-     			<p th:text="${chord.id}"></p>
-     			
+<!--   			<p th:text="${chord.id}"></p>
+-->       			
      			<pre class="tab">	      III	  V	    VII</pre>
      			<p th:text="${chord.stringE6.pressWhere}" />
      			<p th:text="${chord.stringH5.pressWhere}" />
