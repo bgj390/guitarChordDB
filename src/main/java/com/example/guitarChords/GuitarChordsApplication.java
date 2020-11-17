@@ -60,28 +60,7 @@ public class GuitarChordsApplication {
 			String fifth =   "[]-----|-----|-----|-----|-[x]-|-----|-----|";
 			String sixth =   "[]-----|-----|-----|-----|-----|-[x]-|-----|";
 			String seventh = "[]-----|-----|-----|-----|-----|-----|-[x]-|";
-	/**		pos.add(mute);
-			pos.add(empty);
-			pos.add(first);
-			pos.add(second);
-			pos.add(third);
-			pos.add(fourth);
-			pos.add(fifth);
-			pos.add(sixth);
-			pos.add(seventh);
-	*/			
-			
-			// Save all positions for each ?#Rep
-			
-	/**		for (int i = 0; i < (pos.size()); i++) {
-				e1Rep.save(new StringE1(pos.get(i)));
-				a2Rep.save(new StringA2(pos.get(i)));
-				d3Rep.save(new StringD3(pos.get(i)));
-				g4Rep.save(new StringG4(pos.get(i)));
-				h5Rep.save(new StringH5(pos.get(i)));
-				e6Rep.save(new StringE6(pos.get(i)));
-			}
-	*/		
+		
 			// Save all positions for each ?#Rep using names
 			e1Rep.save(new StringE1(mute));
 			e1Rep.save(new StringE1(empty));
@@ -142,24 +121,7 @@ public class GuitarChordsApplication {
 			e6Rep.save(new StringE6(fifth));
 			e6Rep.save(new StringE6(sixth));
 			e6Rep.save(new StringE6(seventh));
-			
-/*			commented out due deploynent
-			// hard code some chords
-			cRep.save(new Chord("E", e6Rep.findByPressWhere(empty).get(0), h5Rep.findByPressWhere(empty).get(0), g4Rep.findByPressWhere(first).get(0), d3Rep.findByPressWhere(second).get(0), a2Rep.findByPressWhere(second).get(0), e1Rep.findByPressWhere(empty).get(0)));
-			cRep.save(new Chord("Em", e6Rep.findByPressWhere(empty).get(0), h5Rep.findByPressWhere(empty).get(0), g4Rep.findByPressWhere(empty).get(0), d3Rep.findByPressWhere(second).get(0), a2Rep.findByPressWhere(second).get(0), e1Rep.findByPressWhere(empty).get(0)));
-			cRep.save(new Chord("F", e6Rep.findByPressWhere(first).get(0), h5Rep.findByPressWhere(first).get(0), g4Rep.findByPressWhere(second).get(0), d3Rep.findByPressWhere(third).get(0), a2Rep.findByPressWhere(third).get(0), e1Rep.findByPressWhere(first).get(0)));
-			cRep.save(new Chord("Fm", e6Rep.findByPressWhere(first).get(0), h5Rep.findByPressWhere(first).get(0), g4Rep.findByPressWhere(first).get(0), d3Rep.findByPressWhere(third).get(0), a2Rep.findByPressWhere(third).get(0), e1Rep.findByPressWhere(first).get(0)));	
-			cRep.save(new Chord("G", e6Rep.findByPressWhere(third).get(0), h5Rep.findByPressWhere(empty).get(0), g4Rep.findByPressWhere(empty).get(0), d3Rep.findByPressWhere(empty).get(0), a2Rep.findByPressWhere(second).get(0), e1Rep.findByPressWhere(third).get(0)));
-			cRep.save(new Chord("Gm", e6Rep.findByPressWhere(third).get(0), h5Rep.findByPressWhere(third).get(0), g4Rep.findByPressWhere(third).get(0), d3Rep.findByPressWhere(empty).get(0), a2Rep.findByPressWhere(mute).get(0), e1Rep.findByPressWhere(third).get(0)));
-			cRep.save(new Chord("A", e6Rep.findByPressWhere(empty).get(0), h5Rep.findByPressWhere(second).get(0), g4Rep.findByPressWhere(second).get(0), d3Rep.findByPressWhere(second).get(0), a2Rep.findByPressWhere(empty).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			cRep.save(new Chord("Am", e6Rep.findByPressWhere(empty).get(0), h5Rep.findByPressWhere(first).get(0), g4Rep.findByPressWhere(second).get(0), d3Rep.findByPressWhere(second).get(0), a2Rep.findByPressWhere(empty).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			cRep.save(new Chord("H", e6Rep.findByPressWhere(mute).get(0), h5Rep.findByPressWhere(fourth).get(0), g4Rep.findByPressWhere(fourth).get(0), d3Rep.findByPressWhere(fourth).get(0), a2Rep.findByPressWhere(second).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			cRep.save(new Chord("Hm", e6Rep.findByPressWhere(second).get(0), h5Rep.findByPressWhere(third).get(0), g4Rep.findByPressWhere(fourth).get(0), d3Rep.findByPressWhere(fourth).get(0), a2Rep.findByPressWhere(second).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			cRep.save(new Chord("C", e6Rep.findByPressWhere(empty).get(0), h5Rep.findByPressWhere(first).get(0), g4Rep.findByPressWhere(empty).get(0), d3Rep.findByPressWhere(second).get(0), a2Rep.findByPressWhere(third).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			cRep.save(new Chord("Cm", e6Rep.findByPressWhere(third).get(0), h5Rep.findByPressWhere(fourth).get(0), g4Rep.findByPressWhere(fifth).get(0), d3Rep.findByPressWhere(fifth).get(0), a2Rep.findByPressWhere(third).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			cRep.save(new Chord("D", e6Rep.findByPressWhere(second).get(0), h5Rep.findByPressWhere(third).get(0), g4Rep.findByPressWhere(second).get(0), d3Rep.findByPressWhere(empty).get(0), a2Rep.findByPressWhere(mute).get(0), e1Rep.findByPressWhere(mute).get(0)));
-			cRep.save(new Chord("Dm", e6Rep.findByPressWhere(first).get(0), h5Rep.findByPressWhere(third).get(0), g4Rep.findByPressWhere(second).get(0), d3Rep.findByPressWhere(empty).get(0), a2Rep.findByPressWhere(mute).get(0), e1Rep.findByPressWhere(mute).get(0)));
-*/			
+						
 			// Create users: admin/admin user/user
 			uRep.deleteAll();
 			User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");

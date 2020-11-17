@@ -106,17 +106,5 @@ public class ChordController {
     	model.addAttribute("stringE1s", e1Rep.findAll());
     	return "editchord";
     }
-/*     // View a chord
-    @RequestMapping(value="/view/{id}")
-    public String addChordtoCart(@PathVariable("id") Long chordId, Model model) {
-    	model.addAttribute("chord", cRep.findById(chordId));
-   // 	model.addAttribute("ids", cRep.findIdByName(chordName));
-    	model.addAttribute("stringE6s", e6Rep.findAll());
-    	model.addAttribute("stringH5s", h5Rep.findAll());
-    	model.addAttribute("stringG4s", g4Rep.findAll());
-    	model.addAttribute("stringD3s", d3Rep.findAll());
-    	model.addAttribute("stringA2s", a2Rep.findAll());
-    	model.addAttribute("stringE1s", e1Rep.findAll());
-    	return "shortchordlist";
-    }	*/
+
 }
