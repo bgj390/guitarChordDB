@@ -25,14 +25,7 @@ public class ChordRepositoryTests {
 
 	@Autowired
 	private ChordRepository cRep;
-	
-	@Test
-	public void findByNameShouldReturnChord() {
-		List<Chord> chords = cRep.findByName("A");
-		
-		assertThat(chords).hasSize(1);
-		assertThat(chords.get(0)).isNotNull();
-	}
+
 	
 	@Test
 	public void ShouldCreateNewChord() {
