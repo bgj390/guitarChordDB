@@ -64,8 +64,7 @@ footer {
      	<li th:each="chord:${chords}">
      		<div class="flex-container">
      			<h3 th:text="${chord.name}"></h3>
-<!--   			<p th:text="${chord.id}"></p>
--->       			
+      			
      			<pre class="tab">	      III	  V	    VII</pre>
      			<p th:text="${chord.stringE6.pressWhere}" />
      			<p th:text="${chord.stringH5.pressWhere}" />
@@ -73,6 +72,7 @@ footer {
      			<p th:text="${chord.stringD3.pressWhere}" />
      			<p th:text="${chord.stringA2.pressWhere}" />
      			<p th:text="${chord.stringE1.pressWhere}" />
+     			<p th:text="${chord.id}"></p>
      			<a th:href="@{/edit/{id}(id=${chord.id})}" class="btn btn-warning">Edit</a>
      			<p sec:authorize="hasAuthority('ADMIN')">
      				<a th:href="@{/delete/{id}(id=${chord.id})}" class="btn btn-danger">Delete</a>
