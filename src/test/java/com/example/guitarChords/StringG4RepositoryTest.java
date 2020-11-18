@@ -20,12 +20,14 @@ public class StringG4RepositoryTest {
 	@Autowired
 	private StringG4Repository repository;
 	
+	// test that existing position can be found
 	@Test
 	public void findByPressWhereShouldReturnStringG4() {
 		List<StringG4> stringG4s = repository.findByPressWhere("0|-----|-----|-----|-----|-----|-----|-----|");
 		assertThat(stringG4s).hasSize(1);
 	}
 	
+	// test create new position
 	@Test
 	public void shouldCreateNewStringG4() {
 		StringG4 g4 = new StringG4("00000");
@@ -33,6 +35,7 @@ public class StringG4RepositoryTest {
 		assertThat(g4.getStringG4Id()).isNotNull();
 	}
 	
+	// test delete position
 	@Test
 	public void shouldDeleteById() {
 		StringG4 n = new StringG4("nnnn");

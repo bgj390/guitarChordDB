@@ -20,7 +20,7 @@ public class User {
 	@Column(name="id", nullable= false, updatable= false)
 	private Long id;
 	
-	//   Username with unique constraint
+	// Username with unique constraint
 	@Column(name="username", nullable= false, unique = true)
 	private String username;
 	
@@ -30,6 +30,7 @@ public class User {
 	@Column(name="role", nullable= false)
 	private String role;
 
+	// constructors
 	public User() {}
 		
 	public User(String username, String passwordHash, String role) {
@@ -39,6 +40,7 @@ public class User {
 		this.role = role;
 	}
 
+	// getters and setters
 	public String getUsername() {
 		return username;
 	}

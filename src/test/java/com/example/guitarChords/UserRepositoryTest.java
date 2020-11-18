@@ -18,6 +18,7 @@ public class UserRepositoryTest {
 	@Autowired
 	private UserRepository uRep;
 	
+	// test find user by username
 	@Test
 	public void findByUsernameShuoldReturnUser() {
 		User user = uRep.findByUsername("user");

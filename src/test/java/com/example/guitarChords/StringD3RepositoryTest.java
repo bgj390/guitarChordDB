@@ -20,12 +20,14 @@ public class StringD3RepositoryTest {
 	@Autowired
 	private StringD3Repository repository;
 	
+	// test that existing position can be found
 	@Test
 	public void findByPressWhereShouldReturnStringD3() {
 		List<StringD3> stringD3s = repository.findByPressWhere("0|-----|-----|-----|-----|-----|-----|-----|");
 		assertThat(stringD3s).hasSize(1);
 	}
 	
+	// test create new position
 	@Test
 	public void shouldCreateNewStringD3() {
 		StringD3 d3 = new StringD3("00000");
@@ -33,6 +35,7 @@ public class StringD3RepositoryTest {
 		assertThat(d3.getStringD3Id()).isNotNull();
 	}
 	
+	// test delete position
 	@Test
 	public void shouldDeleteById() {
 		StringD3 n = new StringD3("nnnn");

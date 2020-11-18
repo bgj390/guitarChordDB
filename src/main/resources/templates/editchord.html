@@ -28,6 +28,7 @@ footer {
 			</p>
 		</div>
 		<div>
+		<!-- fields for all attributes to edit -->
 		<form th:object="${chord}" th:action="@{../save}" action="#" method="post">
 			<label for="id"></label>
 			<input type="hidden" th:field="*{id}"></input>

@@ -20,12 +20,14 @@ public class StringH5RepositoryTest {
 	@Autowired
 	private StringH5Repository repository;
 	
+	// test that existing position can be found
 	@Test
 	public void findByPressWhereShouldReturnStringH5() {
 		List<StringH5> stringH5s = repository.findByPressWhere("0|-----|-----|-----|-----|-----|-----|-----|");
 		assertThat(stringH5s).hasSize(1);
 	}
 	
+	// test create new position
 	@Test
 	public void shouldCreateNewStringH5() {
 		StringH5 h5 = new StringH5("00000");
@@ -33,6 +35,7 @@ public class StringH5RepositoryTest {
 		assertThat(h5.getStringH5Id()).isNotNull();
 	}
 	
+	// test delete position
 	@Test
 	public void shouldDeleteById() {
 		StringH5 n = new StringH5("nnnn");

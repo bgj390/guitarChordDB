@@ -21,7 +21,7 @@ public class Chord {
 	private Long id;
 	private String name;
 	
-
+	// database connections to all 6 strings
 	@ManyToOne
 	@JsonIgnore
 	@JoinColumn(name = "stringE6Id")
@@ -53,6 +53,7 @@ public class Chord {
 	@JsonManagedReference
 	private StringE1 stringE1;
 	
+	// constructors
 	public Chord() {}
 
 	public Chord(String name, StringE6 stringE6, StringH5 stringH5, StringG4 stringG4, StringD3 stringD3, StringA2 stringA2, StringE1 stringE1) {
@@ -66,6 +67,7 @@ public class Chord {
 		this.stringE1 = stringE1;
 	}
 
+	// getters and setters
 	public Long getId() {
 		return id;
 	}
@@ -130,6 +132,7 @@ public class Chord {
 		this.stringE1 = stringE1;
 	}
 
+	// toString method
 	@Override
 	public String toString() {
 		return "Chord [name=" + name + 

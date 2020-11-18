@@ -26,7 +26,7 @@ public class ChordRepositoryTests {
 	@Autowired
 	private ChordRepository cRep;
 
-	
+	// test create new chord
 	@Test
 	public void ShouldCreateNewChord() {
 		Chord chord = new Chord("E7sus4", new StringE6("0|-----|-----|-----|-----|-----|-----|-----|"), new StringH5("0|-----|-----|-----|-----|-----|-----|-----|"), new StringG4("0|-----|-----|-----|-----|-----|-----|-----|"), new StringD3("0|-----|-----|-----|-----|-----|-----|-----|"), new StringA2("0|-----|-----|-----|-----|-----|-----|-----|"), new StringE1("0|-----|-----|-----|-----|-----|-----|-----|"));
@@ -41,6 +41,9 @@ public class ChordRepositoryTests {
 		assertThat(chord.getStringE6()).isNotNull();
 	}
 	
+	/* test delete all chords
+	 * (you should have hard-coded chords in application!) 
+	 */
 	@Test
 	public void shouldDeleteAll() {
 		cRep.deleteAll();

@@ -42,7 +42,7 @@ public class ChordController {
 	@Autowired
 	private StringE6Repository e6Rep;
 
-	// Log in
+	// Log in page
 	@RequestMapping(value= {"/", "/login"}, method = RequestMethod.GET)
 	public String login() {
 		return "login";
@@ -53,7 +53,7 @@ public class ChordController {
 		model.addAttribute("chords", cRep.findAll());
 		return "chordlist";
 	}
-	
+	// REST instructions page
 	@RequestMapping("/apipage")
 	public String apipage(Model model) {
 		return "apipage";

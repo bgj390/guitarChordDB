@@ -19,10 +19,12 @@ public class StringD3 {
 	private Long stringD3Id;
 	private String pressWhere;
 	
+	// database connection to chord
 	@JsonBackReference
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "stringD3")
 	private List<Chord> chords;
 	
+	// constructors
 	public StringD3() {}
 
 	public StringD3(String pressWhere) {
@@ -30,6 +32,7 @@ public class StringD3 {
 		this.pressWhere = pressWhere;
 	}
 
+	// getters and setters
 	public Long getStringD3Id() {
 		return stringD3Id;
 	}
@@ -54,6 +57,7 @@ public class StringD3 {
 		this.chords = chords;
 	}
 
+	// toString method
 	@Override
 	public String toString() {
 		return "StringD3 [stringD3Id=" + stringD3Id + ", pressWhere=" + pressWhere + "]";

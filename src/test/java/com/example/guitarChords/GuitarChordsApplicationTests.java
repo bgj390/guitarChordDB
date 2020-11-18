@@ -17,6 +17,7 @@ class GuitarChordsApplicationTests {
 	@Autowired
 	private ChordController controller;
 	
+	// test ChordController exists
 	@Test
 	void contextLoads() throws Exception {
 		assertThat(controller).isNotNull();

@@ -15,12 +15,12 @@
         <div class="alert alert-danger" role="alert" th:if="${param.logout}">
             You have been logged out.
         </div>
+        <!-- log in form -->
         <form th:action="@{/login}" method="post">
         	<h1 class="h3 mb-3 font-weight-normal">Sign in as user/user</h1>
             <div><label> Username: <input type="text" name="username"/> </label></div>
             <div><label> Password: <input type="password" name="password"/> </label></div><br>
-            <div><button class="btn btn-lg btn-primary" type="submit">Sign in</button></div><br><br>
-      <!--	<div>Want an account? <a th:href="@{/registration_form}">Register here</a></div>  -->      
+            <div><button class="btn btn-lg btn-primary" type="submit">Sign in</button></div>   
         </form>
     </body>
 </html>

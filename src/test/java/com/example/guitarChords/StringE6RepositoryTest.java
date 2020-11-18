@@ -20,12 +20,14 @@ public class StringE6RepositoryTest {
 	@Autowired
 	private StringE6Repository repository;
 	
+	// test that existing position can be found
 	@Test
 	public void findByPressWhereShouldReturnStringE6() {
 		List<StringE6> stringE6s = repository.findByPressWhere("0|-----|-----|-----|-----|-----|-----|-----|");
 		assertThat(stringE6s).hasSize(1);
 	}
 	
+	// test create new position
 	@Test
 	public void shouldCreateNewStringE6() {
 		StringE6 e6 = new StringE6("00000");
@@ -33,6 +35,7 @@ public class StringE6RepositoryTest {
 		assertThat(e6.getStringE6Id()).isNotNull();
 	}
 	
+	// test delete position
 	@Test
 	public void shouldDeleteById() {
 		StringE6 n = new StringE6("nnnn");

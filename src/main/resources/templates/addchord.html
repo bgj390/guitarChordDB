@@ -43,7 +43,7 @@ footer {
 		<h1>Chord Constructor</h1>
 	</header>
 	<div>
-		<h2>Chords saved already in 'A Little Guitar Chord Database' are:</h2>
+		<h2>Chords saved in this database so far:</h2>
     	<ul>
     		<li th:each = "chord : ${chords}">
      			<h3 th:text="${chord.name}"></h3>
@@ -63,6 +63,7 @@ footer {
 				<label for="name"><strong>** Name required: **</strong></label>
 				<input placeholder="type chord name" type="text" id="name" th:field="*{name}" required/>
 			</div>
+			<!-- constructors for all 6 strings -->
 			<div style="clear: both; display: block; height: 10px;"></div>	
 			<label for="stringE6">E6</label>
 			<select id="stringE6list" th:field="*{stringE6}">

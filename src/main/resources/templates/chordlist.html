@@ -46,12 +46,11 @@ footer {
 		<h1>A Little Guitar Chord Database</h1>
 		<h6 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h6>
 		<h2>Chords saved in this database so far:</h2>
-
+<!-- list of chord names in database -->
     <ul>
     	<li th:each = "chord : ${chords}">
    		<h3 th:text="${chord.name}"></h3>
-<!--	<p th:text="${chord.id}"></p>     
--->    	</li>
+   	</li>
     </ul>
 
 	<form th:action="@{/logout}" method="post">
@@ -59,7 +58,7 @@ footer {
 		<input type="submit" value="Sign Out" class="btn btn-secondary"/>
 		<a th:href="@{/apipage}" class="btn btn-info">API</a>
 	</form>
-
+<!-- list of chords in database -->
      <ul>
      	<li th:each="chord:${chords}">
      		<div class="flex-container">
