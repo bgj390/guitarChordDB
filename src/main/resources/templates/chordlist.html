@@ -63,8 +63,7 @@ footer {
      <ul>
      	<li th:each="chord:${chords}">
      		<div class="flex-container">
-     			<h3 th:text="${chord.name}"></h3>
-      			
+     			<h3 th:text="${chord.name}"></h3>      			
      			<pre class="tab">	      III	  V	    VII</pre>
      			<p th:text="${chord.stringE6.pressWhere}" />
      			<p th:text="${chord.stringH5.pressWhere}" />
