@@ -46,7 +46,7 @@ public class ChordController {
 	}
 */	
 	// Show all chords
-	@RequestMapping(value="/chordlist", method = RequestMethod.GET)
+	@RequestMapping(value= {"/", "/chordlist"}, method = RequestMethod.GET)
 	public String chordlist(Model model) {
 		model.addAttribute("chords", cRep.findAll());
 		return "chordlist";
