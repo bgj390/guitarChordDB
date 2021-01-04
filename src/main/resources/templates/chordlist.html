@@ -72,10 +72,12 @@ footer {
      			<p th:text="${chord.stringE1.pressWhere}" />
      			<p th:text="${chord.id}"></p>
      			<a th:href="@{/edit/{id}(id=${chord.id})}" class="btn btn-warning">Edit</a>
-     			<p sec:authorize="hasAuthority('ADMIN')">
-     				<a th:href="@{/delete/{id}(id=${chord.id})}" class="btn btn-danger">Delete</a>
-
-				</p>
+<!--     			<p sec:authorize="hasAuthority('ADMIN')">
+--> 
+     			<a th:href="@{/delete/{id}(id=${chord.id})}" class="btn btn-danger">Delete</a>
+ 
+<!--				</p>
+-->
 				<pre class="tab">	</pre>
 			</div>     	
      	</li>
