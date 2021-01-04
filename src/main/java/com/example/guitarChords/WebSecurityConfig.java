@@ -1,4 +1,3 @@
-/*
 package com.example.guitarChords;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http
+		http.formLogin().disable();
+/*
 		.authorizeRequests()
 			.anyRequest().authenticated()
 			.and()
@@ -33,12 +33,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 		.logout()
 			.permitAll();
-	}
-	
+*/	
+	}	
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
     	auth.userDetailsService(uDS).passwordEncoder(new BCryptPasswordEncoder());
     	}
 
 }
-*/
+

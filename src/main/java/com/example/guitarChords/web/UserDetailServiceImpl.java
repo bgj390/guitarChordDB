@@ -1,4 +1,3 @@
-/*
 package com.example.guitarChords.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,4 +28,4 @@ public class UserDetailServiceImpl implements UserDetailsService {
     }
     
 }
-*/
+
