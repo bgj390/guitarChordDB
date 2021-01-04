@@ -39,10 +39,12 @@ public class ChordController {
 	private StringE6Repository e6Rep;
 
 	// Log in page
+/*	
 	@RequestMapping(value= {"/", "/login"}, method = RequestMethod.GET)
 	public String login() {
 		return "login";
 	}
+*/	
 	// Show all chords
 	@RequestMapping(value="/chordlist", method = RequestMethod.GET)
 	public String chordlist(Model model) {
